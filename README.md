@@ -1,23 +1,53 @@
-# HTML 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon Clone</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Amazon Clone</h1>
-    <input type="text" id="search" placeholder="Search for products..." />
-    <button>Cart (<span id="cart-count">0</span>)</button>
-  </header>
+#CSS
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  <main id="products-container">
-    <!-- Products will be injected by JS -->
-  </main>
+header {
+  background-color: #232f3e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  background: #ffa41c;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 20px;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
+}
